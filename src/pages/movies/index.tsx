@@ -6,7 +6,8 @@ import Link from 'next/link'
 import { GetStaticProps } from 'next';
 import { IMovies } from '@/types/types';
 
-const defaultEndPoint = 'https://api.themoviedb.org/3/movie/upcoming?api_key=b7e763dc89359ad28e83964b5a12b539&language=en-US&page=1';
+const api_key = process.env.API_KEY;
+const defaultEndPoint = `https://api.themoviedb.org/3/movie/upcoming?api_key=${api_key}&language=en-US&page=1`;
 const imageDefaultEndPoint = 'https://image.tmdb.org/t/p/w500/'
 
 
