@@ -31,7 +31,7 @@ const index = ({ data }: IMovies) => {
     <div>
         <h1>Movies Index path</h1>    
         <div sx={{variant: 'containers.page'}}>
-      <h2>Movies fetch with secret API from next.config.js</h2>
+      <h2>Movies fetch with secret API 2</h2>
       <div sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap'}}>
         { movies ? (movies.map((movie) => (
           <div key={movie.id} sx={{width: '33%', p: 2}}>
