@@ -32,7 +32,7 @@ const index = ({ data }: IMovies) => {
         <div sx={{variant: 'containers.page'}}>
       <h2>Movies</h2>
       <div sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap'}}>
-        {movies.map((movie) => (
+        {movies?.map((movie) => (
           <div key={movie.id} sx={{width: '33%', p: 2}}>
             <Link key={movie.id} href="/movies/[id]" as={`/movies/${movie.id}`} sx={{textDecoration: 'none', cursor: 'pointer'}}>
                 <div sx={{variant: 'containers.card'}}>
