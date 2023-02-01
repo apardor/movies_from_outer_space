@@ -10,9 +10,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env: $secrets.TMDB_API_KEY
-
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
