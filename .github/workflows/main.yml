@@ -10,7 +10,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env: ${{ secrets.TMDB_API_KEY }}
+    env: $secrets.TMDB_API_KEY
 
 
     steps:
