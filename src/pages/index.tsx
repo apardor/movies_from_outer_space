@@ -1,6 +1,10 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import React from 'react'
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import { jsx } from 'theme-ui'
 import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,9 +19,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1> Movies from Outer Space</h1>
-        <Link href='/about'>About</Link>
-        <Link href='/movies'>Movies</Link>
+      <div sx={{ height: `calc(100vh - 60px)`}}>
+        <div sx={{variant: 'containers.page', display: 'flex', alignItems: 'center', height: '100%'}}>
+        <h1 sx={{fontSize: 8, my: 0}}>Movies from Outer Space</h1>
+      </div>
+     </div> 
       </main>
     </>
   )

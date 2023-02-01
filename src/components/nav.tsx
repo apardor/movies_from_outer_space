@@ -1,19 +1,28 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import Link from 'next/link'
 
+
+
 const Nav = () => (
   <header sx={{height: '60px', width: '100vw', bg: 'primary', borderBottom: '1px solid', borderColor: 'primary'}}>
     <nav sx={{display: 'flex', alignItems: 'center',  justifyContent: 'space-between', variant: 'containers.page', height: '100%'}}>
-      <Link href="/">
-        <a sx={{fontWeight: 'bold', fontSize: 4, cursor: 'pointer'}}>Movie App</a>
+      <Link href="/" sx={{fontWeight: 'bold', fontSize: 4, cursor: 'pointer'}}>
+        Movies App
       </Link>
 
-      <Link href="/movies">
-        <a sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>notes</a>
+      <Link href="/movies" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+       Movies
       </Link>
 
-      <a sx={{color: 'text', fontSize: 3, cursor: 'pointer'}} href={process.env.HELP_APP_URL}>Help</a>
+      <Link href="/about" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+       About
+      </Link>
+
+
+
+
     </nav>
   </header>
 )

@@ -1,6 +1,10 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
 import React from 'react';
 import { NextRouter, useRouter } from 'next/router';
 import { IRoutes } from '@/types/types';
+import { jsx } from 'theme-ui'
+import Link from 'next/link'
 
 const Page : React.FC = () => {
 
@@ -9,7 +13,9 @@ const Page : React.FC = () => {
     const { id } = router.query as IRoutes;
 
   return (
-    <h1> Note {id}</h1>
+    <div sx={{variant: 'containers.page'}}>
+    <h1>Movie: {id} </h1>
+  </div>
   )
 }
 
