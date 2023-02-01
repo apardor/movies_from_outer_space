@@ -3,16 +3,16 @@
 import { jsx } from 'theme-ui'
 import React from 'react'
 import Link from 'next/link'
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import { IMovies } from '@/types/types';
 
-const api_key = process.env.API_KEY;
+const api_key = process.env.TMDB_API_KEY;
 const defaultEndPoint = `https://api.themoviedb.org/3/movie/upcoming?api_key=${api_key}&language=en-US&page=1`;
 const imageDefaultEndPoint = 'https://image.tmdb.org/t/p/w500/'
 
 
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
 const res = await fetch(defaultEndPoint);
 const data = await res.json();
 return{
