@@ -24,6 +24,9 @@ jobs:
         run: npm ci
       - name: Build Application
         run: npm run build
+      -name: TMDB Secret
+          with:
+            TMDB_API_KEY : ${{secrets.TMDB_API_KEY }}
       - name: Deploy to S3
         run: aws s3 sync ./out s3://${{ secrets.BUCKET_NAME }}
       - name: Create Cloudfront Invalidation
