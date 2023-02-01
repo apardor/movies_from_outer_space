@@ -10,6 +10,7 @@ const api_key = process.env.TMDB_API_KEY;
 const defaultEndPoint = `https://api.themoviedb.org/3/movie/upcoming?api_key=${api_key}&language=en-US&page=1`;
 const imageDefaultEndPoint = 'https://image.tmdb.org/t/p/w500/'
 
+console.log(defaultEndPoint, 'here is default point');
 
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -24,6 +25,9 @@ return{
 
 
 const index = ({ data }: IMovies) => {
+
+  console.log(defaultEndPoint, 'here is default point');
+  
 
   const movies = data.results;
   return (

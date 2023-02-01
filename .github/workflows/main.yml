@@ -10,6 +10,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env: ${{ secrets.TMDB_API_KEY }}
+
 
     steps:
       - name: Checkout Repository
@@ -23,8 +25,6 @@ jobs:
       - name: Install Modules
         run: npm ci
       - name: Build Application
-           commands:
-        - env | grep -e TMDB_API_KEY >> .env.production
         run: npm run build
       - name: Deploy to S3
         run: aws s3 sync ./out s3://${{ secrets.BUCKET_NAME }}
