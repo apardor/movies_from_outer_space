@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env:{
-    TMDB_API_KEY: process.env.TMDB_API_KEY
+    TMDB_API_KEY: b7e763dc89359ad28e83964b5a12b539
   }
 }
 

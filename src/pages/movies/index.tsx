@@ -11,6 +11,7 @@ const defaultEndPoint = `https://api.themoviedb.org/3/movie/upcoming?api_key=${a
 const imageDefaultEndPoint = 'https://image.tmdb.org/t/p/w500/'
 
 
+
 export const getStaticProps: GetStaticProps = async () => {
 const res = await fetch(defaultEndPoint);
 const data = await res.json();
@@ -24,13 +25,13 @@ return{
 
 const index = ({ data }: IMovies) => {
 
-  
   const movies = data.results;
   return (
+
     <div>
         <h1>Movies Index path</h1>    
         <div sx={{variant: 'containers.page'}}>
-      <h2>Movies fetch with secret API</h2>
+      <h2>Movies fetch with secret API from next.config.js</h2>
       <div sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap'}}>
         { movies ? (movies.map((movie) => (
           <div key={movie.id} sx={{width: '33%', p: 2}}>
