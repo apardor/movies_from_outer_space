@@ -7,13 +7,11 @@ import { GetStaticProps } from 'next';
 import { IMovies } from '@/types/types';
 
 const api_key = process.env.TMDB_API_KEY;
-const defaultEndPoint = 'https://api.themoviedb.org/3/movie/upcoming?api_key=b7e763dc89359ad28e83964b5a12b539&language=en-US&page=1';
+const defaultEndPoint = `https://api.themoviedb.org/3/movie/upcoming?api_key=${api_key}&language=en-US&page=1`;
 const imageDefaultEndPoint = 'https://image.tmdb.org/t/p/w500/'
 
 
 export const getStaticProps: GetStaticProps = async () => {
-console.log(defaultEndPoint, 'from server');
-
 const res = await fetch(defaultEndPoint);
 const data = await res.json();
 return{
@@ -26,14 +24,13 @@ return{
 
 const index = ({ data }: IMovies) => {
 
-  console.log(defaultEndPoint, 'from client');
-
+  
   const movies = data.results;
   return (
     <div>
         <h1>Movies Index path</h1>    
         <div sx={{variant: 'containers.page'}}>
-      <h2>Movies fetch secret API</h2>
+      <h2>Movies fetch with secret API</h2>
       <div sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap'}}>
         { movies ? (movies.map((movie) => (
           <div key={movie.id} sx={{width: '33%', p: 2}}>
