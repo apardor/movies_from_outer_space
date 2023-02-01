@@ -3,7 +3,7 @@
 import { jsx } from 'theme-ui'
 import React from 'react'
 import Link from 'next/link'
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { IMovies } from '@/types/types';
 
 const api_key = process.env.API_KEY;
@@ -12,7 +12,7 @@ const imageDefaultEndPoint = 'https://image.tmdb.org/t/p/w500/'
 
 
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
 const res = await fetch(defaultEndPoint);
 const data = await res.json();
 return{
