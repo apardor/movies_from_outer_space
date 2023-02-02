@@ -12,25 +12,25 @@ const Nav = () => (
         Movies from outer space
       </Link>
 
-      <Link href="/movies/30s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/30s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
        30s
       </Link>
-      <Link href="/movies/40s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/40s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
        40s
       </Link>
-      <Link href="/movies/50s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/50s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
        50s
       </Link>
-      <Link href="/movies/60s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/60s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
        6Os
       </Link>
-      <Link href="/movies/70s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/70s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
        70s
       </Link>
-      <Link href="/movies/80s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/80s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
        80s
       </Link>
-      <Link href="/movies/90s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/90s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
        90s
       </Link>
 

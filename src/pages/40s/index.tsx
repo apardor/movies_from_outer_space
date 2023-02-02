@@ -7,7 +7,7 @@ import { IMovies } from '@/types/types';
 
 const api_key = process.env.TMDB_API_KEY;
 const baseUrl = process.env.API_URL
-const defaultEndPoint = `${baseUrl}discover/movie?api_key=b7e763dc89359ad28e83964b5a12b539&with_genres=878&primary_release_date.gte=1980-01-01&primary_release_date.lte=1989-12-31&with_keywords=space&sort_by=release_date.asc`;
+const defaultEndPoint = `${baseUrl}discover/movie?api_key=b7e763dc89359ad28e83964b5a12b539&with_genres=878&primary_release_date.gte=1940-01-01&primary_release_date.lte=1949-12-31&with_keywords=space&sort_by=release_date.asc`;
 const imageDefaultEndPoint = 'https://image.tmdb.org/t/p/w500/'
 
 
@@ -25,16 +25,16 @@ const index = ({ data }: IMovies) => {
 
   const movies = data.results;
   const totalResults = data.total_results;
-
+  
   return (
-    <div>  
+    <div>   
         <div sx={{variant: 'containers.page'}}>
-        <h1>30s</h1>   
+        <h1>40s</h1>   
         <h2>Total results: {totalResults}</h2> 
       <div sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap'}}>
         { movies ? (movies.map((movie) => (
           <div key={movie.id} sx={{width: '33%', p: 2}}>
-            <Link key={movie.id} href="/movies/80s/[id]" as={`/movies/80s/${movie.id}`} sx={{textDecoration: 'none', cursor: 'pointer'}}>
+            <Link key={movie.id} href="/40s/[id]" as={`/40s/${movie.id}`} sx={{textDecoration: 'none', cursor: 'pointer'}}>
                 <div sx={{variant: 'containers.card'}}>
                   <img sx={{width: '100%'}} src={`${imageDefaultEndPoint}${movie.poster_path}`} alt={movie.original_title} />
                     <p><strong>{movie.original_title}</strong></p> 

@@ -65,7 +65,7 @@ useEffect(() => {
             if( sciFi != undefined)  {
               return (      
                 <div key={movie.id} sx={{width: '33%', p: 2}}>
-                <Link key={movie.id} href="/movies/[id]" as={`/movies/${movie.id}`} sx={{textDecoration: 'none', cursor: 'pointer'}}>
+                <Link key={movie.id} href="/[id]" as={`/${movie.id}`} sx={{textDecoration: 'none', cursor: 'pointer'}}>
                     <div sx={{variant: 'containers.card'}}>
                       <img sx={{width: '100%'}} src={`${imageDefaultEndPoint}${movie.poster_path}`} alt={movie.original_title} />
                         <p><strong>{movie.original_title}</strong></p> 
