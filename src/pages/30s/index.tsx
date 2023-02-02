@@ -28,8 +28,6 @@ const index = ({ data }: IMovies) => {
   const movies = data.results;
   const pages = data.total_pages
   const totalResults = data.total_results;
-
-  console.log(movies, 'here are movies');
   
 
   return (       

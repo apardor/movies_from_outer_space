@@ -27,10 +27,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
 
 const Page = ({ data }: IMovie) => {
- console.log(data, 'here is data');
  
-
-
   return (
   
     <div sx={{variant: 'containers.page'}}>
