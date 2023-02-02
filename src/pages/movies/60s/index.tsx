@@ -34,7 +34,7 @@ const index = ({ data }: IMovies) => {
       <div sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap'}}>
         { movies ? (movies.map((movie) => (
           <div key={movie.id} sx={{width: '33%', p: 2}}>
-            <Link key={movie.id} href="/movies/[id]" as={`/movies/${movie.id}`} sx={{textDecoration: 'none', cursor: 'pointer'}}>
+            <Link key={movie.id} href="/movies/60s/[id]" as={`/movies/60s/${movie.id}`} sx={{textDecoration: 'none', cursor: 'pointer'}}>
                 <div sx={{variant: 'containers.card'}}>
                   <img sx={{width: '100%'}} src={`${imageDefaultEndPoint}${movie.poster_path}`} alt={movie.original_title} />
                     <p><strong>{movie.original_title}</strong></p> 

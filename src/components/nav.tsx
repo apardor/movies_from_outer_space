@@ -13,22 +13,25 @@ const Nav = () => (
       </Link>
 
       <Link href="/movies/30s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
-       3Os
+       30s
       </Link>
       <Link href="/movies/40s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
-       4Os
+       40s
       </Link>
       <Link href="/movies/50s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
-       5Os
+       50s
       </Link>
       <Link href="/movies/60s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
        6Os
       </Link>
       <Link href="/movies/70s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
-       7Os
+       70s
       </Link>
       <Link href="/movies/80s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
-       8Os
+       80s
+      </Link>
+      <Link href="/movies/90s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+       90s
       </Link>
 
       <Link href="/about" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
