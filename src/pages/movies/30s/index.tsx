@@ -4,9 +4,6 @@ import { jsx } from 'theme-ui'
 import Link from 'next/link'
 import { GetStaticProps } from 'next';
 import { IMovies } from '@/types/types';
-import { useState } from 'react';
-import Pagination from '@/components/Pagination';
-
 
 
 const api_key = process.env.TMDB_API_KEY;
@@ -35,16 +32,6 @@ const index = ({ data }: IMovies) => {
   console.log(movies, 'here are movies');
   
 
-const [results, updateResults ] = useState(0);
-const [page, updatePage ] = useState(1);
-
-const nextPage = (pageNumber:number) => {
-  defaultEndPoint.concat(`&page=${pageNumber}`)
-  updatePage(pageNumber)
-}
-
-
-
   return (       
     <div sx={{variant: 'containers.page'}}>
         <h1>30s</h1>   
@@ -63,7 +50,6 @@ const nextPage = (pageNumber:number) => {
           </div>
         ))) : <h3>Loading...</h3>}
       </div> 
-        { pages > 1 ? <Pagination pages={ pages } nextPage={ nextPage } defaultEndPoint={defaultEndPoint}/> : ''}  
     </div>    
   )
 }

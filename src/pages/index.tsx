@@ -20,9 +20,9 @@ const imageDefaultEndPoint = 'https://image.tmdb.org/t/p/w500/'
 
 export default function Home() {
 
-const [movies, setMovies] = useState([]);; 
-const [search, setSearch] = useState(''); 
-const [query, setQuery] = useState('') ;
+const [movies, setMovies] = React.useState([]);; 
+const [search, setSearch] = React.useState(''); 
+const [query, setQuery] = React.useState('') ;
 
 const searchMovie = async () =>{
   const request = await fetch (`https://api.themoviedb.org/3/search/movie?api_key=b7e763dc89359ad28e83964b5a12b539&query=${query}&sort_by=release_date.asc`)
