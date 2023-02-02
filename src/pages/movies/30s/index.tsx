@@ -4,10 +4,14 @@ import { jsx } from 'theme-ui'
 import Link from 'next/link'
 import { GetStaticProps } from 'next';
 import { IMovies } from '@/types/types';
+import { useState } from 'react';
+import Pagination from '@/components/Pagination';
+
+
 
 const api_key = process.env.TMDB_API_KEY;
 const baseUrl = process.env.API_URL
-const defaultEndPoint = `${baseUrl}discover/movie?api_key=${api_key}&with_genres=878&primary_release_date.gte=1930-01-01&primary_release_date.lte=1939-12-31&with_keywords=space&sort_by=release_date.asc`;
+const defaultEndPoint = `${baseUrl}discover/movie?api_key=b7e763dc89359ad28e83964b5a12b539&with_genres=878&primary_release_date.gte=1930-01-01&primary_release_date.lte=1939-12-31&with_keywords=space&sort_by=release_date.asc`;
 const imageDefaultEndPoint = 'https://image.tmdb.org/t/p/w500/'
 
 
@@ -21,15 +25,30 @@ return{
   }
 }
 
+
 const index = ({ data }: IMovies) => {
 
   const movies = data.results;
-  return (
+  const pages = data.total_pages
+  const totalResults = data.total_results;
 
-    <div>
-        <h1>Movies Index path</h1>    
-        <div sx={{variant: 'containers.page'}}>
-      <h2>Movies fetch with secret API 2</h2>
+  console.log(movies, 'here are movies');
+  
+
+const [results, updateResults ] = useState(0);
+const [page, updatePage ] = useState(1);
+
+const nextPage = (pageNumber:number) => {
+  defaultEndPoint.concat(`&page=${pageNumber}`)
+  updatePage(pageNumber)
+}
+
+
+
+  return (       
+    <div sx={{variant: 'containers.page'}}>
+        <h1>30s</h1>   
+        <h2>Total results: {totalResults}</h2> 
       <div sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap'}}>
         { movies ? (movies.map((movie) => (
           <div key={movie.id} sx={{width: '33%', p: 2}}>
@@ -44,9 +63,12 @@ const index = ({ data }: IMovies) => {
           </div>
         ))) : <h3>Loading...</h3>}
       </div> 
+        { pages > 1 ? <Pagination pages={ pages } nextPage={ nextPage } defaultEndPoint={defaultEndPoint}/> : ''}  
     </div>    
-    </div>
   )
 }
 
 export default index
+
+
+

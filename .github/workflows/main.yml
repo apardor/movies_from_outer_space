@@ -22,8 +22,6 @@ jobs:
       - name: Install Modules
         run: npm ci
       - name: Build Application
-          env:
-            TMDB_API_KEY: ${{secrets.TMDB_API_KEY}}
         run: npm run build
       - name: Deploy to S3
         run: aws s3 sync ./out s3://${{ secrets.BUCKET_NAME }}
