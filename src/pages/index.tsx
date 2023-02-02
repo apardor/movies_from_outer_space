@@ -1,17 +1,12 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import React, { useState, useEffect } from 'react';
-import Head from 'next/head'
-import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { jsx } from 'theme-ui'
 import Link from 'next/link'
 import { GetStaticProps } from 'next';
-import { emitKeypressEvents } from 'readline';
-import { findAncestor } from 'typescript';
 
 
-const inter = Inter({ subsets: ['latin'] })
 
 
 const api_key = process.env.TMDB_API_KEY;
@@ -25,9 +20,9 @@ const imageDefaultEndPoint = 'https://image.tmdb.org/t/p/w500/'
 
 export default function Home() {
 
-const [movies, setMovies] = React.useState();; 
-const [search, setSearch] = React.useState(''); 
-const [query, setQuery] = React.useState('') ;
+const [movies, setMovies] = useState([]);; 
+const [search, setSearch] = useState(''); 
+const [query, setQuery] = useState('') ;
 
 const searchMovie = async () =>{
   const request = await fetch (`https://api.themoviedb.org/3/search/movie?api_key=b7e763dc89359ad28e83964b5a12b539&query=${query}&sort_by=release_date.asc`)
@@ -37,7 +32,7 @@ const searchMovie = async () =>{
 
 
 
-const handleChange = (e: React.SyntheticEvent) =>{
+const handleChange = (e:any) =>{
  setSearch(e.target.value);
  console.log(search);
 }
@@ -64,9 +59,9 @@ useEffect(() => {
         </form>
         <div sx={{variant: 'containers.page'}}>
       <div sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap'}}>
-      {   movies?.map(movie => {
+      {  movies ? (movies.map((movie:any) => {
             const genre =   movie.genre_ids;
-            const sciFi = genre.find(el => el === 878)
+            const sciFi = genre.find((el:any) => el === 878)
             if( sciFi != undefined)  {
               return (      
                 <div key={movie.id} sx={{width: '33%', p: 2}}>
@@ -80,7 +75,7 @@ useEffect(() => {
                 </Link>
               </div>  
               )       
-            }})} 
+            }})) : ''} 
          </div> 
         </div>  
       </div>
