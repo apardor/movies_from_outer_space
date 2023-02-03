@@ -8,7 +8,7 @@ import { IMovies } from '@/types/types';
 
 const api_key = process.env.TMDB_API_KEY;
 const baseUrl = process.env.API_URL
-const defaultEndPoint = `https://api.themoviedb.org/3/discover/movie?api_key=b7e763dc89359ad28e83964b5a12b539&with_genres=878&primary_release_date.gte=1930-01-01&primary_release_date.lte=1939-12-31&with_keywords=space&sort_by=release_date.asc`;
+const defaultEndPoint = `https://api.themoviedb.org/3/discover/movie?api_key=b7e763dc89359ad28e83964b5a12b539&with_genres=878&primary_release_date.gte=1930-01-01&primary_release_date.lte=1939-12-31&sort_by=release_date.asc`;
 const imageDefaultEndPoint = 'https://image.tmdb.org/t/p/w500/'
 
 

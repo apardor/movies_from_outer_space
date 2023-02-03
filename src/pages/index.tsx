@@ -25,7 +25,7 @@ const [search, setSearch] = React.useState('');
 const [query, setQuery] = React.useState('') ;
 
 const searchMovie = async () =>{
-  const request = await fetch (`https://api.themoviedb.org/3/search/movie?api_key=b7e763dc89359ad28e83964b5a12b539&query=${query}&sort_by=release_date.asc`)
+  const request = await fetch (`https://api.themoviedb.org/3/search/movie?api_key=b7e763dc89359ad28e83964b5a12b539&query=${query}`)
   const res = await request.json();
   setMovies(res.results);
 }
