@@ -29,7 +29,7 @@ const index = ({ data }: IMovies) => {
   return (
     <div>   
         <div sx={{variant: 'containers.page'}}>
-        <h1>30s</h1>   
+        <h1>90s</h1>   
         <h2>Total results: {totalResults}</h2> 
       <div sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap'}}>
         { movies ? (movies.map((movie) => (
