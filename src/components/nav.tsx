@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 
 const Nav = () => (
+  <header>
     <nav>
       <Link href="/">
         Movies from outer space
@@ -33,6 +34,7 @@ const Nav = () => (
        About
       </Link>
     </nav>
+    </header>
 )
 
 export default Nav
