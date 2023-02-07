@@ -1,5 +1,5 @@
+import Nav from '@/components/Nav';
 import type { AppProps } from 'next/app'
-import Nav from '../components/Nav'
 import '../styles/styles.css';
 
 
