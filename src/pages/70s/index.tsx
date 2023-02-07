@@ -1,6 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from 'theme-ui'
+
 import Link from 'next/link'
 import { GetStaticProps } from 'next';
 import { IMovies } from '@/types/types';
@@ -26,17 +24,16 @@ const index = ({ data }: IMovies) => {
   const movies = data.results;
   const totalResults = data.total_results;
 
-  return (
+  return (       
     <div>
-        <div sx={{variant: 'containers.page'}}>
-        <h1>70s</h1>   
+        <h1>30s</h1>   
         <h2>Total results: {totalResults}</h2> 
-      <div sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap'}}>
+      <div>
         { movies ? (movies.map((movie) => (
-          <div key={movie.id} sx={{width: '33%', p: 2}}>
-            <Link key={movie.id} href="/70s/[id]" as={`/70s/${movie.id}`} sx={{textDecoration: 'none', cursor: 'pointer'}}>
-                <div sx={{variant: 'containers.card'}}>
-                  <img sx={{width: '100%'}} src={`${imageDefaultEndPoint}${movie.poster_path}`} alt={movie.original_title} />
+          <div key={movie.id}>
+            <Link key={movie.id} href="/30s/[id]" as={`/30s/${movie.id}`}>
+                <div>
+                  <img src={`${imageDefaultEndPoint}${movie.poster_path}`} alt={movie.original_title} />
                     <p><strong>{movie.original_title}</strong></p> 
                     <p><strong>Rating: {movie.vote_average}</strong></p> 
                     <p><strong>Release date: {movie.release_date}</strong></p> 
@@ -46,7 +43,6 @@ const index = ({ data }: IMovies) => {
         ))) : <h3>Loading...</h3>}
       </div> 
     </div>    
-    </div>
   )
 }
 

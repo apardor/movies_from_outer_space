@@ -22,8 +22,6 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
-    "@theme-ui/presets": "^0.15.4",
-    "@types/query-string": "^6.3.0",
-    "theme-ui": "^0.15.4"
+    "@types/query-string": "^6.3.0"
   }
 }

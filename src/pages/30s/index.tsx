@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from 'theme-ui'
 import Link from 'next/link'
 import { GetStaticProps } from 'next';
 import { IMovies } from '@/types/types';
@@ -31,15 +28,15 @@ const index = ({ data }: IMovies) => {
   
 
   return (       
-    <div sx={{variant: 'containers.page'}}>
+    <div>
         <h1>30s</h1>   
         <h2>Total results: {totalResults}</h2> 
-      <div sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap'}}>
+      <div>
         { movies ? (movies.map((movie) => (
-          <div key={movie.id} sx={{width: '33%', p: 2}}>
-            <Link key={movie.id} href="/30s/[id]" as={`/30s/${movie.id}`} sx={{textDecoration: 'none', cursor: 'pointer'}}>
-                <div sx={{variant: 'containers.card'}}>
-                  <img sx={{width: '100%'}} src={`${imageDefaultEndPoint}${movie.poster_path}`} alt={movie.original_title} />
+          <div key={movie.id}>
+            <Link key={movie.id} href="/30s/[id]" as={`/30s/${movie.id}`}>
+                <div>
+                  <img src={`${imageDefaultEndPoint}${movie.poster_path}`} alt={movie.original_title} />
                     <p><strong>{movie.original_title}</strong></p> 
                     <p><strong>Rating: {movie.vote_average}</strong></p> 
                     <p><strong>Release date: {movie.release_date}</strong></p> 

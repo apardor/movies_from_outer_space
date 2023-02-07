@@ -1,48 +1,38 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from 'theme-ui'
 import Link from 'next/link'
 
 
-
 const Nav = () => (
-  <header sx={{height: '60px', width: '100vw', bg: 'primary', borderBottom: '1px solid', borderColor: 'primary'}}>
-    <nav sx={{display: 'flex', alignItems: 'center',  justifyContent: 'space-between', variant: 'containers.page', height: '100%'}}>
-      <Link href="/" sx={{fontWeight: 'bold', fontSize: 4, cursor: 'pointer'}}>
+    <nav>
+      <Link href="/">
         Movies from outer space
       </Link>
 
-      <Link href="/30s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/30s">
        30s
       </Link>
-      <Link href="/40s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/40s">
        40s
       </Link>
-      <Link href="/50s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/50s">
        50s
       </Link>
-      <Link href="/60s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/60s">
        6Os
       </Link>
-      <Link href="/70s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/70s">
        70s
       </Link>
-      <Link href="/80s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/80s">
        80s
       </Link>
-      <Link href="/90s" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/90s">
        90s
       </Link>
 
-      <Link href="/about" sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>
+      <Link href="/about">
        About
       </Link>
-
-
-
-
     </nav>
-  </header>
 )
 
 export default Nav
