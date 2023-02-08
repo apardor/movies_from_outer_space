@@ -1,9 +1,19 @@
+.heading__h1{
+  font-size: 3.5rem;
+  color: whitesmoke;
+  padding: 2rem;
+  text-align: center;
+}
+
 .heading__h2{
-  font-size: 5rem;
+  font-size: 2rem;
+  color: whitesmoke;
+  text-align: center;
+
 }
 
 .heading__h3{
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0 0.5rem 0 0.5rem;
 }
 
@@ -35,7 +45,7 @@ justify-content: center;
 
 .search__input:focus {
   outline: none;
-  border:2px solid rgb(8, 207, 25);
+  border:2px solid  #360264;
 }
 
 .search__button{
@@ -53,14 +63,15 @@ justify-content: center;
 
 
 .search__no__results{
-  border-radius: 15px;
+  border-radius: 5px;
   text-align: center;
   margin-top: 5rem;
   width: 10%;
   margin-left: 45%;
+  padding: 1rem;
   position: absolute;
-  color: black;
-  background-color: red;
+  color: whitesmoke;
+  background-color: #360264;
 }
 
 

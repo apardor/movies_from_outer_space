@@ -2,6 +2,8 @@
 import Link from 'next/link'
 import { GetStaticProps } from 'next';
 import { IMovies } from '@/types/types';
+import Image from 'next/image';
+import styles from '@/styles/Home.module.css'
 
 const api_key = process.env.TMDB_API_KEY;
 const baseUrl = process.env.API_URL
@@ -27,20 +29,24 @@ const index = ({ data }: IMovies) => {
 
   return (       
     <div>
-        <h1>30s</h1>   
-        <h2>Total results: {totalResults}</h2> 
-      <div>
-        { movies ? (movies.map((movie) => (
-          <div key={movie.id}>
-            <Link key={movie.id} href="/30s/[id]" as={`/30s/${movie.id}`}>
-                <div>
-                  <img src={`${imageDefaultEndPoint}${movie.poster_path}`} alt={movie.original_title} />
-                    <p><strong>{movie.original_title}</strong></p> 
-                    <p><strong>Rating: {movie.vote_average}</strong></p> 
-                    <p><strong>Release date: {movie.release_date}</strong></p> 
-              </div>
-            </Link>
-          </div>
+        <h1 className={styles.heading__h1}>80s</h1>   
+        <h2 className={styles.heading__h2}>Total results: {totalResults}</h2> 
+        <div className={styles.search__results} >
+                  { movies ? (movies.map((movie) => (
+                       <div key={movie.id} className={styles.card}>
+                       <Link key={movie.id} href="/[id]" as={`/${movie.id}`}>
+                           <div className={styles.card__container}>
+                             <Image src={`${imageDefaultEndPoint}${movie.poster_path}`} alt={movie.original_title} 
+                                     width="0"
+                                     height="0"
+                                     sizes="100%"
+                                     style={{ width: '100%', height: 'auto', borderRadius:'20px 20px 0 0' }}/>
+                               <h3 className={styles.heading__h3}><strong>{movie.original_title}</strong></h3> 
+                               <p><strong>Rating: {movie.vote_average}</strong></p> 
+                               <p><strong>Release date: {movie.release_date}</strong></p> 
+                         </div>
+                       </Link>
+                     </div> 
         ))) : <h3>Loading...</h3>}
       </div> 
     </div>    

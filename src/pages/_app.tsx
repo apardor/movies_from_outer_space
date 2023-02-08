@@ -1,12 +1,12 @@
-import Nav from '../components/Nav';
 import type { AppProps } from 'next/app'
 import '../styles/styles.css';
+import Burger from '@/components/Burger';
 
 
 
 export default function App({ Component, pageProps }: AppProps) {
   return (<>
-      <Nav />
+      <Burger />
       <Component {...pageProps} />
       </>
   )
