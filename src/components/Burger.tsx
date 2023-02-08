@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styles from '@/styles/Burger.module.css'
-import Link from 'next/link'
 import Nav from './Nav';
 
 
