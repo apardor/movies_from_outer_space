@@ -1,11 +1,29 @@
 import React from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
+import styles from '@/styles/Pagination.module.css'
 
 
-const Pagination = () => {
+
+const Pagination = ({moviesPerPage, totalMovies, paginate}) => {
+  const pageNumbers: number[] = [];
+
+  for(let i = 1; i <= Math.ceil(totalMovies/moviesPerPage); i++){
+    pageNumbers.push(i)
+  }
 
   return (
-    <h1>Pagination</h1>
+    <nav>
+      <ul className={styles.pagination__ul}>
+        {pageNumbers?.map( number =>{
+        return   <li key={number}>
+                    <Link href="" onClick={()=> paginate(number)}>
+                      {number}
+                    </Link>
+          </li>
+        })}
+
+      </ul>
+    </nav>
   )
 }
 

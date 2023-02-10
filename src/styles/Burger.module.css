@@ -16,15 +16,15 @@
    .burger-bar{
      width: 4rem;
      height: 0.5rem;
-     background-color: red;
+     background-color: #8BC34A;
      border-radius: 0.5rem;
    
    }
    
    .burgerClass{
-     width: 2rem;
+     width: 3rem;
      height: 0.25rem;
-     background-color: blue;
+     background-color: #8BC34A;
      border-radius: 10px;
    }
    

@@ -1,0 +1,25 @@
+.pagination__ul{
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    
+}
+
+.pagination__ul li{
+    list-style: none;
+}
+
+.pagination__ul li a{
+    border-radius: 5px;
+padding: 2rem;
+background-color: #FFF9C4;
+color:#212121 ;
+}
+
+.pagination__ul li a:hover{
+background-color: #FFEB3B;
+}
