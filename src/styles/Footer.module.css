@@ -1,0 +1,13 @@
+.footer__bar{
+    display: flex;
+    gap:2rem;
+    background-color: black;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 1.1rem;
+}
+
+.footer__icon{
+    color: #01B3E3;
+    font-size: 1.4rem;
+}
