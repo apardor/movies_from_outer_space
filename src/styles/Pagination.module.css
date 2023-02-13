@@ -16,10 +16,11 @@
 .pagination__ul li a{
     border-radius: 5px;
 padding: 2rem;
-background-color: #FFF9C4;
+background-color: #C5CAE9;
 color:#212121 ;
+transition: all .2s ease-in;
 }
 
 .pagination__ul li a:hover{
-background-color: #FFEB3B;
+background-color: #00BCD4;
 }

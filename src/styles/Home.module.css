@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
-
 .heading__h1{
-  font-family: 'Creepster', cursive;
+  font-family: 'Raleway', sans-serif;
   font-size: 8rem;
   color: whitesmoke;
   padding: 2rem;
   text-align: center;
-  background: -webkit-linear-gradient(45deg, #8BC34A,#FBC02D);
+  background: -webkit-linear-gradient(45deg, #303F9F,#00BCD4);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -48,8 +46,7 @@ justify-content: center;
 }
 
 .search__input:focus {
-  outline: none;
-  border:2px solid  #8BC34A;
+  outline:  1px solid  #C5CAE9;
 }
 
 .search__button{
@@ -61,7 +58,7 @@ justify-content: center;
   padding: 1rem;
   cursor: pointer;
   border: 0;
-  background-color: #FFEB3B;
+  background-color: #C5CAE9;
   color:#212121;
   transition: all .2s ease-in;
 }
@@ -81,7 +78,7 @@ justify-content: center;
 
 
 .search__button:hover{
-  background-color: #8BC34A;
+  background-color: #00BCD4;
 }
 
 
@@ -108,6 +105,15 @@ justify-content: center;
   margin: auto;
 }
 
+.search__results__random{
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+}
+
 .card{
   text-align: center;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -130,19 +136,126 @@ justify-content: center;
 
 
 .emojis{
+  position: relative;
   display: flex;
-  text-align: center;
-  font-size: 5rem;
   justify-content: center;
-  gap: 3rem;
+  align-items: center;
+  cursor: pointer;
+  width: 150px;
+  margin: auto;
 }
 
-  
-  .fontawesome__icon {
-    font-size: 5rem;
-    color: #8BC34A;
+.recommend__movie{
+  background-color: #FFFFFF;
+    position: absolute;
+    bottom: 90%;
+    padding: 10px 15px;
+    width: 185px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transition: all .5s;
+    color: #212121;
+}
+
+.recommend__movie::after{
+  content: '';
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  position: absolute;
+  top: 100%;
+  left: 40%;
+  margin-left: 5%;
+}
+
+.fontawesome__icon{
+  color: #C5CAE9;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 5rem;
+}
+
+.emojis:hover .recommend__movie{
+  opacity: 1;
+  transform: translateY(-10px);
+  animation: shake;
+}
+
+.fontawesome__icon:hover {
+  color: #00BCD4;
+  animation: shake 150ms 2 linear;
+  -moz-animation: shake 150ms 2 linear;
+  -webkit-animation: shake 150ms 2 linear;
+  -o-animation: shake 150ms 2 linear;
+}
+
+
+
+
+
+  @keyframes shake {
+    0% {
+      transform: translate(3px, 0);
+    }
+    50% {
+      transform: translate(-3px, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @-moz-keyframes shake {
+    0% {
+      -moz-transform: translate(3px, 0);
+    }
+    50% {
+      -moz-transform: translate(-3px, 0);
+    }
+    100% {
+      -moz-transform: translate(0, 0);
+    }
+  }
+
+  @-webkit-keyframes shake {
+    0% {
+      -webkit-transform: translate(3px, 0);
+    }
+    50% {
+      -webkit-transform: translate(-3px, 0);
+    }
+    100% {
+      -webkit-transform: translate(0, 0);
+    }
+  }
+
+  @-ms-keyframes shake {
+    0% {
+      -ms-transform: translate(3px, 0);
+    }
+    50% {
+      -ms-transform: translate(-3px, 0);
+    }
+    100% {
+      -ms-transform: translate(0, 0);
+    }
+  }
+
+  @-o-keyframes shake {
+    0% {
+      -o-transform: translate(3px, 0);
+    }
+    50% {
+      -o-transform: translate(-3px, 0);
+    }
+    100% {
+      -o-transform: translate(0, 0);
+    }
   }
   
+
+
 
 
   

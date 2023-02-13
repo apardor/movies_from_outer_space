@@ -1,10 +1,7 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
-
-
 ul.nav__display{
     display: flex;
-    background: -webkit-linear-gradient(200deg, #8BC34A,#FBC02D);
+    background: -webkit-linear-gradient(200deg,  #303F9F,#00BCD4);
     opacity: 0.98;
     position: fixed;
     top: 0;
@@ -22,7 +19,7 @@ ul.nav__display{
   
   ul.nav__hide{
     display: flex;
-    background: -webkit-linear-gradient(200deg,#8BC34A,#FBC02D);
+    background: -webkit-linear-gradient(200deg, #303F9F,#00BCD4);
     position: fixed;
     top: 0;
     right: 0;
@@ -55,9 +52,14 @@ ul.nav__display{
   }
 
   .nav__li a{
-    font-family: 'Creepster', cursive;
-  font-size: 4rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 4rem;
     color: #212121;
+    transition: all .5s;
+  }
+
+  .nav__li a:hover{
+    color: #C5CAE9;
   }
   
   .header__links {
