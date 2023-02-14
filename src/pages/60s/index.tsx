@@ -6,14 +6,14 @@ const api_key = process.env.TMDB_API_KEY;
 
 const index = () => {
 
-  const [movies, setMovies] = React.useState([]); 
-  const [pages, setPages] = React.useState(''); 
-  const [totalResults, setTotalResults] = React.useState(''); 
-  const [currentPage, setCurrentPage] = React.useState('1'); 
+  const [movies, setMovies] = useState([]); 
+  const [pages, setPages] = useState(''); 
+  const [totalResults, setTotalResults] = useState(''); 
+  const [currentPage, setCurrentPage] = useState('1'); 
 
 
   const searchMovieDecade = async () =>{
-    const request = await fetch (`https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&with_genres=878&primary_release_date.gte=1970-01-01&primary_release_date.lte=1979-12-31&sort_by=release_date.asc&page=${currentPage}`)
+    const request = await fetch (`https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&with_genres=878&primary_release_date.gte=1960-01-01&primary_release_date.lte=1969-12-31&sort_by=release_date.asc&page=${currentPage}`)
     const res = await request.json();  
     setMovies(res.results);
     setPages(res.total_pages)
@@ -31,7 +31,7 @@ useEffect(() => {
 
   return (       
     <div>
-        <h1 className={styles.heading__h1}>70s</h1>   
+        <h1 className={styles.heading__h1}>60s</h1>   
         <h2 className={styles.heading__h2}>Total results: {totalResults}</h2> 
         <Decades movies={movies} pages={pages} paginate={paginate}/>
     </div>    

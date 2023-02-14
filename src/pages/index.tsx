@@ -17,14 +17,14 @@ const api_key = process.env.TMDB_API_KEY;
 
 export default function Home() {
 
-const [movies, setMovies] = React.useState([]); 
-const [results, setResults] = React.useState(false); 
-const [loading, setLoading] = React.useState(false); 
-const [currentPage, setCurrentPage] = React.useState(1); 
-const [moviesPerPage] = React.useState(12);
-const [search, setSearch] = React.useState(''); 
-const [query, setQuery] = React.useState('') ;
-const [random, setRandom] = React.useState('');
+const [movies, setMovies] = useState([]); 
+const [results, setResults] = useState(false); 
+const [loading, setLoading] = useState(false); 
+const [currentPage, setCurrentPage] = useState(1); 
+const [moviesPerPage] = useState(12);
+const [search, setSearch] = useState(''); 
+const [query, setQuery] = useState('') ;
+const [random, setRandom] = useState('');
 
 const searchMovie = async () =>{
   const request = await fetch (`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${query}`)

@@ -6,10 +6,10 @@ const api_key = process.env.TMDB_API_KEY;
 
 const index = () => {
 
-  const [movies, setMovies] = React.useState([]); 
-  const [pages, setPages] = React.useState(''); 
-  const [totalResults, setTotalResults] = React.useState(''); 
-  const [currentPage, setCurrentPage] = React.useState('1'); 
+  const [movies, setMovies] = useState([]); 
+  const [pages, setPages] = useState(''); 
+  const [totalResults, setTotalResults] = useState(''); 
+  const [currentPage, setCurrentPage] = useState('1'); 
 
 
   const searchMovieDecade = async () =>{
