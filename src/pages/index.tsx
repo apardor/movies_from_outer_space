@@ -6,7 +6,6 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faRocket } from "@fortawesome/free-solid-svg-icons";
-
 import Movies from '@/components/Movies';
 import Pagination from '@/components/Pagination';
 
@@ -109,7 +108,7 @@ const paginate = (pageNumber: number) => setCurrentPage(pageNumber)
        </div>
         <div>
           <Movies currentMovies={currentMovies}  loading={loading} random= {random} />
-          <Pagination  moviesPerPage={moviesPerPage} totalMovies={sciFiResults.length} paginate={paginate} />
+          { sciFiResults.length > 12 ? <Pagination  moviesPerPage={moviesPerPage} totalMovies={sciFiResults.length} paginate={paginate} /> : ''}
         </div>  
       </div>
      </main>

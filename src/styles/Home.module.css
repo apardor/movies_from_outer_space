@@ -15,6 +15,7 @@
   font-size: 2rem;
   color: whitesmoke;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .heading__h3{
@@ -205,6 +206,13 @@ justify-content: center;
   -o-animation: shake 150ms 2 linear;
 }
 
+
+.no__image__icon{
+  color: #BDBDBD;
+  padding: 155px 15px;
+  font-size: 5rem;
+  height: 200px;
+}
 
 
 
