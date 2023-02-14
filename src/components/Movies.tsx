@@ -38,7 +38,7 @@ if(loading){
             )       
              })) : ''}  </div> 
    { random  ? <div className={styles.search__results__random}>
-              <div key={random.id} className={styles.card}>
+              <div key={random.id} className={styles.card__random}>
               <Link key={random.id} href="/[id]" as={`/${random.id}`}>
                   <div className={styles.card__container}>
                     <Image src={`${imageDefaultEndPoint}/${random.poster_path}`} alt={random.original_title} 

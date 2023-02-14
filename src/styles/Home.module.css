@@ -107,7 +107,6 @@ justify-content: center;
 
 .search__results__random{
   display: flex;
-  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   width: 90%;
   margin: auto;
@@ -132,6 +131,22 @@ justify-content: center;
 .card__container{
   color: #141414;
   text-decoration: none;
+}
+
+.card__random{
+  text-align: center;
+  width: 500px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border: 1px solid;
+  border-color: muted;
+  border-radius: 25px;
+  line-height: 2;
+  background-color: whitesmoke;
+  transition: transform .2s; 
+}
+
+.card__random:hover{
+  transform: scale(1.05);
 }
 
 

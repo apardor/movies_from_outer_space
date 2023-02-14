@@ -30,7 +30,7 @@ const Burger = () => {
 
   return (
     <nav className={styles.nav}>
-      <Link href="/">>
+      <Link href="/">
       <FontAwesomeIcon icon={faSpaghettiMonsterFlying} className={styles.nav__icon}/>
       </Link>
        <div className={styles.burger_menu} open={open} onClick={updateMenu}>
