@@ -17,20 +17,20 @@ const api_key = process.env.TMDB_API_KEY;
 
 export default function Home() {
 
-const [movies, setMovies] = useState([]); 
-const [results, setResults] = useState(false); 
-const [loading, setLoading] = useState(false); 
-const [currentPage, setCurrentPage] = useState(1); 
+const [movies, SetMovies] = useState([]); 
+const [results, SetResults] = useState(false); 
+const [loading, SetLoading] = useState(false); 
+const [currentPage, SetCurrentPage] = useState(1); 
 const [moviesPerPage] = useState(12);
-const [search, setSearch] = useState(''); 
-const [query, setQuery] = useState('') ;
-const [random, setRandom] = useState('');
+const [search, SetSearch] = useState(''); 
+const [query, SetQuery] = useState('') ;
+const [random, SetRandom] = useState('');
 
 const searchMovie = async () =>{
   const request = await fetch (`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${query}`)
   const res = await request.json();
-  setMovies(res.results);
-  setRandom('')
+  SetMovies(res.results);
+  SetRandom('')
 
 }
 
@@ -45,14 +45,14 @@ const sciFiFilter =  movies?.map((movie:any) => {
 }) 
 
 const handleChange = (e:any) =>{
- setSearch(e.target.value);
+ SetSearch(e.target.value);
 }
 
 const submitSearchMovie = (e: React.SyntheticEvent) =>{
   e.preventDefault();
-  setResults(true)
-  setQuery(search)
-  setCurrentPage(1)
+  SetResults(true)
+  SetQuery(search)
+  SetCurrentPage(1)
 }
 
 const randomMovie =  async (e: React.SyntheticEvent) =>{
@@ -62,15 +62,15 @@ const randomMovie =  async (e: React.SyntheticEvent) =>{
   const request = await fetch (`https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&with_genres=878&page=${randomPage}`)
   const res = await request.json();
   const randomMovie = res.results[Math.floor(Math.random()*res.results.length)];  
-  setRandom(randomMovie)
-  setMovies([])
+  SetRandom(randomMovie)
+  SetMovies([])
 }
 
 const clearMovies = () => {
-   setMovies([]);
-   setRandom('');
-   setSearch('');
-   setResults(false);
+   SetMovies([]);
+   SetRandom('');
+   SetSearch('');
+   SetResults(false);
   }
 
 
@@ -82,7 +82,7 @@ const indexOflastMovie = currentPage * moviesPerPage;
 const indexOfFirstMovie = indexOflastMovie - moviesPerPage;
 const currentMovies = sciFiResults.slice(indexOfFirstMovie, indexOflastMovie)
 
-const paginate = (pageNumber: number) => setCurrentPage(pageNumber)
+const paginate = (pageNumber: number) => SetCurrentPage(pageNumber)
 
 
   return (
