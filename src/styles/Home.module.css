@@ -130,8 +130,13 @@ justify-content: center;
 }
 
 .card__container{
+  display: flex;
   color: #141414;
-  text-decoration: none;
+  text-decoration: none; 
+  flex-direction: column;
+  border-radius:20px;
+  overflow: hidden;
+  height: 100%;
 }
 
 .card__random{
@@ -206,10 +211,20 @@ justify-content: center;
   -o-animation: shake 150ms 2 linear;
 }
 
+.image__container{
+  height: 80%;
+  background-color: #BDBDBD;
+  overflow: hidden;
+}
+
+.text__container{
+height: 20%;
+padding-bottom: 5rem;
+}
 
 .no__image__icon{
-  color: #BDBDBD;
-  padding: 155px 15px;
+  color: #C5CAE9;
+  padding: 5rem 15px;
   font-size: 5rem;
   height: 200px;
 }

@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const Burger = () => {
 
-  const [open, setOpen ] = useState(false);
+  const [open, setOpen ] = useState<boolean>(false);
   const [burgerclass, setBurgerClass] = useState("burger-bar unclicked");
 
 
@@ -19,7 +19,7 @@ const Burger = () => {
     }
       },[open]);
 
-   const updateMenu = () =>{
+const updateMenu = () =>{
     if(!open){
      setBurgerClass("burger-bar clicked")
    }else{

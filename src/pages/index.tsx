@@ -13,8 +13,6 @@ import Pagination from '@/components/Pagination';
 
 
 const api_key = process.env.TMDB_API_KEY;
-const baseUrl = process.env.API_URL
-const imageDefaultEndPoint = 'https://image.tmdb.org/t/p/w500'
 
 
 export default function Home() {
@@ -29,7 +27,7 @@ const [query, setQuery] = React.useState('') ;
 const [random, setRandom] = React.useState('');
 
 const searchMovie = async () =>{
-  const request = await fetch (`https://api.themoviedb.org/3/search/movie?api_key=b7e763dc89359ad28e83964b5a12b539&query=${query}`)
+  const request = await fetch (`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${query}`)
   const res = await request.json();
   setMovies(res.results);
   setRandom('')
@@ -61,7 +59,7 @@ const randomMovie =  async (e: React.SyntheticEvent) =>{
   e.preventDefault();
   const totalPages = 224;
   const randomPage = Math.floor(Math.random()*totalPages); 
-  const request = await fetch (`https://api.themoviedb.org/3/discover/movie?api_key=b7e763dc89359ad28e83964b5a12b539&with_genres=878&page=${randomPage}`)
+  const request = await fetch (`https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&with_genres=878&page=${randomPage}`)
   const res = await request.json();
   const randomMovie = res.results[Math.floor(Math.random()*res.results.length)];  
   setRandom(randomMovie)
