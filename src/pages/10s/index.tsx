@@ -4,7 +4,7 @@ import Decades from '@/components/Decades';
 
 const api_key = process.env.TMDB_API_KEY;
 
-const index = () => {
+const Index = () => {
 
   const [movies, SetMovies] = useState([]); 
   const [pages, SetPages] = useState(''); 
@@ -38,7 +38,7 @@ useEffect(() => {
   )
 }
 
-export default index
+export default Index
 
 
 

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const about = () => {
+const About = () => {
   return (
     <div>About Index path</div>
   )
 }
 
-export default about
+export default About
