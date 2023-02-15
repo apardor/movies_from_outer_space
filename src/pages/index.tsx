@@ -26,13 +26,7 @@ const [search, SetSearch] = useState('');
 const [query, SetQuery] = useState('') ;
 const [random, SetRandom] = useState('');
 
-const searchMovie = async () =>{
-  const request = await fetch (`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${query}`)
-  const res = await request.json();
-  SetMovies(res.results);
-  SetRandom('')
 
-}
 
 const sciFiResults: any = [];
 
@@ -75,6 +69,12 @@ const clearMovies = () => {
 
 
 useEffect(() => {
+  const searchMovie = async () =>{
+    const request = await fetch (`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${query}`)
+    const res = await request.json();
+    SetMovies(res.results);
+    SetRandom('')
+  }
   searchMovie()
 }, [query])
 
