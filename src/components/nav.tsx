@@ -3,7 +3,7 @@ import styles from '@/styles/Nav.module.css';
 
 
 
-export const Nav = ({open, closing}) => {
+const Nav = ({open, closing}) => {
 
 
   return (
@@ -25,4 +25,5 @@ export const Nav = ({open, closing}) => {
 };
 
 
+export default Nav
 

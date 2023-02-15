@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from '@/styles/Burger.module.css'
-import { Nav } from './Nav';
+import Nav from './Nav';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faSpaghettiMonsterFlying} from "@fortawesome/free-solid-svg-icons";
 import Link from 'next/link';
