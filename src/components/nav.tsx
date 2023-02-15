@@ -3,7 +3,7 @@ import styles from '@/styles/Nav.module.css';
 
 
 
-const Nav = ({open, closing}) => {
+const Nav = ({open, closing} : {open:any, closing:any}) => {
 
 
   return (

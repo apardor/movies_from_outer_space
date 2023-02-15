@@ -9,7 +9,7 @@ const imageDefaultEndPoint = 'https://image.tmdb.org/t/p/w500'
 
 
 
-const Movies = ({currentMovies, loading, random}) => {
+const Movies = ({currentMovies, loading, random} : {currentMovies:any, loading:any, random:any}) => {
 
 if(loading){
     return <h2> Loading...</h2>

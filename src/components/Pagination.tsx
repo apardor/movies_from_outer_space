@@ -4,7 +4,7 @@ import styles from '@/styles/Pagination.module.css'
 
 
 
-const Pagination = ({moviesPerPage, totalMovies, paginate}) => {
+const Pagination = ({moviesPerPage, totalMovies, paginate}: {moviesPerPage:any, totalMovies:any, paginate:any}) => {
   const pageNumbers: number[] = [];
 
   for(let i = 1; i <= Math.ceil(totalMovies/moviesPerPage); i++){

@@ -4,7 +4,7 @@ import styles from '@/styles/Pagination.module.css'
 
 
 
-const PaginationDecade = ({pages, paginate}) => {
+const PaginationDecade = ({pages, paginate}: {pages:any, paginate:any}) => {
   const pageNumbers: number[] = [];
 
   for(let i = 1; i <= pages; i++){
