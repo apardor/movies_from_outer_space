@@ -22,6 +22,5 @@
   "include": [
     "next-env.d.ts", 
     "src/**/*", 
-    "pages/**/*",],
-  "exclude": ["node_modules"]
-}
+    "pages/**/*",]
+  }
