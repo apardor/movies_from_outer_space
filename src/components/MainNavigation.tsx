@@ -3,7 +3,7 @@ import styles from '@/styles/Nav.module.css';
 
 
 
-const Nav = ({open, closing} : {open:any, closing:any}) => {
+const MainNavigation = ({open, closing} : {open:any, closing:any}) => {
 
 
   return (
@@ -25,5 +25,5 @@ const Nav = ({open, closing} : {open:any, closing:any}) => {
 };
 
 
-export default Nav
+export default MainNavigation
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from '@/styles/Burger.module.css'
-import Nav from '@/components/Nav';
+import MainNavigation from '@/components/MainNavigation';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faSpaghettiMonsterFlying} from "@fortawesome/free-solid-svg-icons";
 import Link from 'next/link';
@@ -40,7 +40,7 @@ const updateMenu = () =>{
           <div className={styles.burgerClass}></div>
           <div className={styles.burgerClass}></div>
       </div>
-      <Nav open={open} closing={updateMenu}/>
+      <MainNavigation open={open} closing={updateMenu}/>
     </nav>
   )
 }
