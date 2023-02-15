@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from '@/styles/Burger.module.css'
-import MainNavigation from '@/components/MainNavigation';
+import Nav from '@/components/MainNavigation';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faSpaghettiMonsterFlying} from "@fortawesome/free-solid-svg-icons";
 import Link from 'next/link';
@@ -10,20 +10,20 @@ import Link from 'next/link';
 const Burger = () => {
 
   const [open, setOpen ] = useState(false);
-  const [burgerclass, setBurgerClass] = useState("burger-bar unclicked");
+  const [burgerBars, setBurgerBars] = useState([styles.burgerBar, styles.unclicked].join(' '));
 
 
   useEffect(() => {
     if (!open) {
-      setBurgerClass("burger-bar unclicked")
-    }
+      setBurgerBars([styles.burgerBar, styles.unclicked].join(' '))   
+     }
       },[open]);
 
 const updateMenu = () =>{
     if(!open){
-     setBurgerClass("burger-bar clicked")
+      setBurgerBars([styles.burgerBar, styles.clicked].join(' '))
    }else{
-   setBurgerClass("burger-bar unclicked")
+    setBurgerBars([styles.burgerBar, styles.unclicked].join(' '))
    }
    setOpen(!open)
   }
@@ -36,11 +36,11 @@ const updateMenu = () =>{
       </Link>
       </div>
        <div className={styles.burger_menu} onClick={updateMenu}>
-          <div className={styles.burgerClass}></div>
-          <div className={styles.burgerClass}></div>
-          <div className={styles.burgerClass}></div>
+          <div className={burgerBars}></div>
+          <div className={burgerBars}></div>
+          <div className={burgerBars}></div>
       </div>
-      <MainNavigation open={open} closing={updateMenu}/>
+      <Nav open={open} closing={updateMenu}/>
     </nav>
   )
 }
