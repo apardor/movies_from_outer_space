@@ -1,9 +1,12 @@
+.main__nav{
+  background-color: red;
+  z-index: 99;
+}
+   
    .nav__icon{
-    font-size: 2rem;
     color: #C5CAE9;
     cursor: pointer;
-    position: fixed;
-    padding: 1rem;
+    font-size: 2rem; 
    }
 
    .nav__icon:hover {
@@ -14,6 +17,15 @@
     -o-animation: shake 150ms 2 linear;
   }
 
+.nav__logo{
+   position: fixed;
+    display: flex;
+    padding: 1rem;
+    width:4rem;
+    height: 4rem;
+    top: 15px;
+    left: 20px;
+}
 
    .burger_menu{
      width:4rem;

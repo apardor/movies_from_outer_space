@@ -103,14 +103,14 @@ justify-content: center;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   width: 90%;
-  margin: auto;
+  margin: 0 auto 2rem auto;  
 }
 
 .search__results__random{
   display: flex;
   gap: 2rem;
   width: 90%;
-  margin: auto;
+  margin: 0 auto 2rem auto;
   justify-content: center;
 }
 

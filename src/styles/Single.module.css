@@ -1,13 +1,13 @@
 .main__container{
     display: flex;
     justify-content: center;
-    margin: 2rem auto 2rem auto;
     width: 70vw;
     background-color: #FFFFFF;
     flex-direction: row;
     align-items: center;
     border-radius: 15px;
     overflow: hidden;
+    margin: 5rem auto 2rem auto;
 }
 
 .container__left{
