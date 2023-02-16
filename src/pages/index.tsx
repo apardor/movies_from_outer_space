@@ -100,7 +100,7 @@ const paginate = (pageNumber: number) => SetCurrentPage(pageNumber)
           <button className={styles.clear__results} onClick={clearMovies}>clear results</button> 
         </form>
        <div> 
-        {   !results ? ((results && !random) ? (sciFiResults.length === 0 ?  <h2 className={`${styles.search__no__results} ${styles.heading__h2}`}> No results </h2> : '') : '') : ''}
+       {  (results && !random) ? (sciFiResults.length === 0 ? <h2 className={`${styles.search__no__results} ${styles.heading__h2}`}> No results </h2> : '') : ''}
         {  random ?  <h2 className={`${styles.search__no__results} ${styles.heading__h2}`}> Check this one out! </h2> : ''}
         { sciFiResults.length > 0 ? <h2 id={styles.results__div} className={`${styles.search__results__length} ${styles.heading__h2}`}>Results: {sciFiResults.length}</h2> : ''}
        </div>
