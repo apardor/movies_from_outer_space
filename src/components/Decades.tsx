@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { IMovies } from '@/types/types';
 import Image from 'next/image';
@@ -9,7 +9,7 @@ import {faGhost } from "@fortawesome/free-solid-svg-icons";
 
 const imageDefaultEndPoint = 'https://image.tmdb.org/t/p/w500/';
 
-const Decades = ({movies,pages,paginate} : {movies:any,pages:string,paginate:any}) => {
+const Decades = ({movies,pages,paginate,currentPage} : {movies:any,pages:string,paginate:any, currentPage:any}) => {
   return (
     <>
     
@@ -45,7 +45,7 @@ const Decades = ({movies,pages,paginate} : {movies:any,pages:string,paginate:any
         )))      
         : <h3>Loading...</h3>}
       </div> 
-      <PaginationDecade pages={pages} paginate={paginate}/> 
+      <PaginationDecade pages={pages} paginate={paginate} currentPage={currentPage} /> 
     </>
   )
 }

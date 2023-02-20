@@ -27,13 +27,13 @@ useEffect(() => {
   SetCurrentPage(pageNumber);
 }
 
-  return (       
-    <div>
-        <h1 className={styles.heading__h1}>00s</h1>   
-        <h2 className={styles.heading__h2}>Total results: {totalResults}</h2> 
-        <Decades movies={movies} pages={pages} paginate={paginate}/>
-    </div>    
-  )
+return (       
+  <div>
+      <h1 className={styles.heading__h1}>00s</h1>   
+      <h2 className={styles.heading__h2}>Total results: {totalResults}</h2> 
+      <Decades movies={movies} pages={pages} paginate={paginate} currentPage={currentPage}/>
+  </div>    
+)
 }
 
 export default Index

@@ -14,6 +14,10 @@
     list-style: none;
 }
 
+.pagination__ul li.active a{
+    list-style: disc;
+}
+
 .pagination__ul li a{
     border-radius: 5px;
 padding: 2rem;
@@ -22,6 +26,20 @@ color:#212121 ;
 transition: all .2s ease-in;
 }
 
+.disabled {
+display: none;
+}
+
+.active {
+    background-color: grey !important;
+    color: white !important;
+  } 
+
+
 .pagination__ul li a:hover{
 background-color: #00BCD4;
+}
+
+a .disabled {
+    display: none;
 }

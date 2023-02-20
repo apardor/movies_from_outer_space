@@ -31,7 +31,7 @@ const Index = () => {
     <div>
         <h1 className={styles.heading__h1}>60s</h1>   
         <h2 className={styles.heading__h2}>Total results: {totalResults}</h2> 
-        <Decades movies={movies} pages={pages} paginate={paginate}/>
+        <Decades movies={movies} pages={pages} paginate={paginate} currentPage={currentPage}/>
     </div>    
   )
 }

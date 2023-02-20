@@ -21,6 +21,8 @@ const [movies, SetMovies] = useState([]);
 const [results, SetResults] = useState(false); 
 const [loading, SetLoading] = useState(false); 
 const [currentPage, SetCurrentPage] = useState(1); 
+const [maxPageLimit, SetMaxPageLimit] = useState(''); 
+const [minPageLimit, SetMinPageLimit] = useState(''); 
 const [moviesPerPage] = useState(12);
 const [search, SetSearch] = useState(''); 
 const [query, SetQuery] = useState('') ;
@@ -106,7 +108,7 @@ const paginate = (pageNumber: number) => SetCurrentPage(pageNumber)
        </div>
         <div>
           <Movies currentMovies={currentMovies}  loading={loading} random= {random} />
-          { sciFiResults.length > 12 ? <Pagination  moviesPerPage={moviesPerPage} totalMovies={sciFiResults.length} paginate={paginate} /> : ''}
+          { sciFiResults.length > 12 ? <Pagination  moviesPerPage={moviesPerPage} totalMovies={sciFiResults.length} paginate={paginate} minPageLimit={minPageLimit} maxPageLimit={maxPageLimit} /> : ''}
         </div>  
       </div>
      </main>

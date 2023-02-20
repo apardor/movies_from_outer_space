@@ -10,6 +10,7 @@ const Index = () => {
   const [pages, SetPages] = useState(''); 
   const [totalResults, SetTotalResults] = useState(''); 
   const [currentPage, SetCurrentPage] = useState('1'); 
+  
 
 
   useEffect(() => {
@@ -29,9 +30,9 @@ const Index = () => {
 
   return (       
     <div>
-        <h1 className={styles.heading__h1}>00s</h1>   
+        <h1 className={styles.heading__h1}>90s</h1>   
         <h2 className={styles.heading__h2}>Total results: {totalResults}</h2> 
-        <Decades movies={movies} pages={pages} paginate={paginate}/>
+        <Decades movies={movies} pages={pages} paginate={paginate} currentPage={currentPage}/>
     </div>    
   )
 }
