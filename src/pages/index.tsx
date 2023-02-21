@@ -107,7 +107,7 @@ const paginate = (pageNumber: number) => SetCurrentPage(pageNumber)
         { sciFiResults.length > 0 ? <h2 id={styles.results__div} className={`${styles.search__results__length} ${styles.heading__h2}`}>Results: {sciFiResults.length}</h2> : ''}
        </div>
         <div>
-          <Movies currentMovies={currentMovies}  loading={loading} random= {random} />
+          <Movies currentMovies={currentMovies} loading={loading} random={random} />
           { sciFiResults.length > 12 ? <Pagination  moviesPerPage={moviesPerPage} totalMovies={sciFiResults.length} paginate={paginate} minPageLimit={minPageLimit} maxPageLimit={maxPageLimit} /> : ''}
         </div>  
       </div>
