@@ -1,6 +1,6 @@
 .heading__h1{
   font-family: 'Raleway', sans-serif;
-  font-size: 8rem;
+  font-size: 4rem;
   color: whitesmoke;
   padding: 2rem;
   text-align: center;
@@ -8,13 +8,13 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 2rem;
+  margin-top: 8rem;
 
 }
 
 .heading__h1__about{
   font-family: 'Raleway', sans-serif;
-  font-size: 8rem;
+  font-size: 4rem;
   color: whitesmoke;
   padding: 2rem;
   text-align: center;
@@ -48,12 +48,14 @@ justify-content: center;
 
 
 .search__form{
-  width: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
   margin: auto;
 }
 
 .search__input{
-  width: 85%;
+  width: 75%;
   font-size: 2rem;
   border-radius: 25px 0 0 25px;
   border: 2px ;
@@ -65,12 +67,10 @@ justify-content: center;
 }
 
 .search__button{
-  width: 15%;
-  height: 100%;
-  font-size: 2rem;
-  font-size: 2rem;
+  width: 25%;
+  font-size: 1rem;
   border-radius: 0 25px 25px 0;
-  padding: 1rem;
+  padding: 1.5rem 0;
   cursor: pointer;
   border: 0;
   background-color: #C5CAE9;
@@ -80,11 +80,13 @@ justify-content: center;
 
 .clear__results{
   display: flex;
+  width:100%;
   border: 0;
   background-color: transparent;
   color:white;
   cursor: pointer;
   margin: auto;
+  justify-content: center;
 }
 
 .clear__results:hover{
@@ -114,9 +116,9 @@ justify-content: center;
 
 .search__results{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  width: 90%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 95%;
   margin: 0 auto 2rem auto;  
 }
 
@@ -150,7 +152,6 @@ justify-content: center;
   flex-direction: column;
   border-radius:20px;
   overflow: hidden;
-  height: 100%;
 }
 
 .card__random{
@@ -227,28 +228,26 @@ justify-content: center;
 
 .image__container{
   height: 80%;
-  background-color: #BDBDBD;
   overflow: hidden;
 }
 
 .text__container{
 height: 20%;
-padding-bottom: 5rem;
+padding-bottom: 2rem;
 }
 
 .no__image__icon{
-  color: #C5CAE9;
+  color: black;
   padding: 5rem 15px;
   font-size: 5rem;
-  height: 200px;
 }
 
 .about{
-  width: 60%;
+  width: 95%;
   margin: auto;
   color: #fff;
-  font-size: 1.8rem;
-  line-height: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 3rem;
 }
 
 .about__p{
@@ -329,6 +328,99 @@ padding-bottom: 5rem;
     }
   }
   
+
+  @media only screen and (min-width: 1200px) {
+
+.heading__h1{
+  font-size: 8rem;
+  padding: 2rem;
+  margin-top: 2rem;
+
+}
+
+.heading__h1__about{
+  font-size: 8rem; 
+}
+
+.heading__h2{
+  font-size: 2rem;
+  color: whitesmoke;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading__h3{
+  font-size: 1.5rem;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.search__form{
+  width: 50vw;
+  margin: auto;
+}
+
+.search__input{
+  width: 85%;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.search__input:focus {
+  outline:  1px solid  #C5CAE9;
+}
+
+.search__button{
+  width: 15%;
+  height: 100%;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+
+.search__results{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 90%;
+  margin: 0 auto 2rem auto;  
+}
+
+.card__container{
+  height: 100%;
+}
+
+.text__container{
+  padding-bottom: 5rem;
+  }
+
+.about{
+  width: 60%;
+  margin: auto;
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+
+.no__image__icon{
+  height: 200px;
+}
+
+.about__p{
+  margin: 2rem 0;
+}
+
+.about__p a{
+  color: #fff;
+  text-decoration: underline;
+}
+
+.about__p a:hover{
+  color: #00BCD4;
+}
+
+ 
+
+  }
 
 
 

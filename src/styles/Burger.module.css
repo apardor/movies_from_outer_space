@@ -2,7 +2,8 @@
    .nav__icon{
     color: #C5CAE9;
     cursor: pointer;
-    font-size: 2rem; 
+    font-size: 3.5rem; 
+    margin-top: -10px;
    }
 
    .nav__icon:hover {
@@ -128,4 +129,14 @@
       100% {
         -o-transform: translate(0, 0);
       }
+    }
+
+    @media only screen and (min-width: 1200px) {
+      .nav__icon{
+        color: #C5CAE9;
+        cursor: pointer;
+        font-size: 2rem; 
+        margin-top: -20px;
+       }
+
     }
