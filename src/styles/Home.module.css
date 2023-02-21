@@ -33,6 +33,7 @@
 }
 
 .heading__h3{
+  color: #212121;
   font-size: 1.5rem;
   padding: 0 0.5rem 0 0.5rem;
 }
@@ -203,6 +204,10 @@ justify-content: center;
   top: 100%;
   left: 40%;
   margin-left: 5%;
+}
+
+.p__movies{
+  color: #212121;
 }
 
 .fontawesome__icon{
