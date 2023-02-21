@@ -1,13 +1,12 @@
 .pagination__ul{
     display: flex;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 2.5rem;
+    padding: 1rem;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    margin: 2rem;
+    margin: 1rem;
     flex-wrap: wrap;
-    
 }
 
 .pagination__ul li{
@@ -20,10 +19,10 @@
 
 .pagination__ul li a{
     border-radius: 5px;
-padding: 2rem;
-background-color: #C5CAE9;
-color:#212121 ;
-transition: all .2s ease-in;
+    padding: 1rem;
+    background-color: #C5CAE9;
+    color:#212121 ;
+    transition: all .2s ease-in;
 }
 
 .disabled {
@@ -43,3 +42,31 @@ background-color: #00BCD4;
 a .disabled {
     display: none;
 }
+
+
+
+@media only screen and (min-width: 1200px) {
+
+    .pagination__ul{
+        gap: 2rem;
+        padding: 2rem;
+        margin: 2rem; 
+    }
+    
+    .pagination__ul li{
+        list-style: none;
+    }
+    
+    .pagination__ul li.active a{
+        list-style: disc;
+    }
+    
+    .pagination__ul li a{
+        border-radius: 5px;
+        padding: 2rem;
+    }
+    
+    
+
+
+  }

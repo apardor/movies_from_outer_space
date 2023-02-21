@@ -245,22 +245,24 @@ padding-bottom: 2rem;
 .about{
   width: 95%;
   margin: auto;
-  color: #fff;
-  font-size: 1.5rem;
-  line-height: 3rem;
 }
 
 .about__p{
   margin: 2rem 0;
+  padding: 2rem;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  color: #212121;
+  background-color: #fff;
+
 }
 
 .about__p a{
-  color: #fff;
-  text-decoration: underline;
+  color: #00BCD4;
 }
 
 .about__p a:hover{
-  color: #00BCD4;
+  text-decoration: underline;
 }
 
 
@@ -409,16 +411,6 @@ padding-bottom: 2rem;
   margin: 2rem 0;
 }
 
-.about__p a{
-  color: #fff;
-  text-decoration: underline;
-}
-
-.about__p a:hover{
-  color: #00BCD4;
-}
-
- 
 
   }
 
