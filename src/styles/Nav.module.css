@@ -49,7 +49,6 @@ ul.nav__display{
   .nav__li{
     text-align: center;
     position: relative;
-    font-size: 2rem;
     width:50vw;
     margin: auto;
     z-index: 3;
@@ -57,7 +56,7 @@ ul.nav__display{
 
   .nav__li a{
     font-family: 'Raleway', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #212121;
     transition: all .5s;
   }
@@ -88,6 +87,11 @@ ul.nav__display{
       height: 100vh;
       width:100vw; 
     }
+
+
+  .nav__li a{
+    font-size: 3rem;
+  }
     
     ul.nav__hide{
       height: 100vh;
